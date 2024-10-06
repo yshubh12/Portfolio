@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="home-section">
+        <div class="content">
+            <h1>Hi There, <br>
+            <span style="color: aliceblue;">I'm  </span><span>SHUBH YADAV</span>
+            </h1>
+
+            <p>I'm into <span>Web Developing.</span><br> <span style="color: white; font-size: medium;">Explore my projects and blog to know more about my work and experiences.</span></p>
+            <a href="#about" class="btn">About Me</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/shubh-yadav-5a4030264?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yshubh12"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/yshubh_?igsh=MXAwaGRudHJlc25sag=="><i class="fab fa-instagram"></i></a>
+                <a href="mailto:shubhyadav085@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="avatar">
+            <img src="IMG_20241004_211948.jpg" alt="Avatar">
+        </div>
+    </section>
+
+    
+
+    <section id="about" class="section">
+        <br>
+        <br>
+        <h2>About Me</h2>
+        <div class="about-body">
+        <p>Hi, I'm Shubh Yadav. I'm a Computer Science Engineering student with a passion for Backend Development.</p>
+        <p>Works on the motto of <b>Thinker, Dreamer, Go-Getter.</b></p>
+        <p>My fields of interests are <span id="dynamic-text">Machine Learning</span></p>
+    </div>
+    <div class="skills">
+        <div>
+            <h3>Technical Skills:</h3>
+            <ul class="skill-list">
+                <li>Python <span class="icon-container"><i class="fab fa-python"></i></span></li>
+                <li>Streamlit <span class="icon-container"><i class="fab fa-react"></i></span></li>
+                <li>Django <span class="icon-container"><i class="fab fa-docker"></i></span></li>
+                <li>Postgres <span class="icon-container"><i class="fas fa-database"></i></span></li>
+                <li>C++ <span class="icon-container"><i class="fas fa-code"></i></span></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Personal Traits:</h3>
+            <ul class="trait-list">
+                <li>Leadership <span class="icon-container"><i class="fas fa-bullseye"></i></span></li>
+                <li>Work Balance <span class="icon-container"><i class="fas fa-balance-scale"></i></span></li>
+                <li>Creativity <span class="icon-container"><i class="fas fa-lightbulb"></i></span></li>
+                <li>Critical Thinking <span class="icon-container"><i class="fas fa-brain"></i></span></li>
+                <li>Adaptability <span class="icon-container"><i class="fas fa-sync-alt"></i></span></li>
+            </ul>
+        </div>
+    </div>
+    
+    </section>
+    
+    <section id="projects" class="section">
+        <br>
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Ni-Shabd</h3>
+            <p>An online e-commerce platform for supporting Farmers connecting farmers and consumers removing middleman and providing financial support to farmers.</p>
+            <div class="vid">
+            <video controls autoplay loop>
+                <source controls src="Screen Recording 2024-10-05 024802.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            </div>
+        </div>
+        
+        <!-- Add more projects as needed -->
+    </section>
+    <section id="blog" class="section">
+        <br>
+        <h2>Blog</h2>
+        <div class="blog-post">
+            <h3 style="color: #c46928;">Integrating Frontend and Backend: Challenges I Overcame While Merging Codebases</h3>
+            <p><b>Introduction:</b></p>
+            <p>Here, I'll share my experience of merging frontend changes into a backend codebase from maintaining code integrity to managing version control efficiently.</p>
+            <p><b>Challenges:</b></p>
+            <ul><li>The major challenge I encountered was merging the frontend changes with the existing backend using Git.</li>
+                <li>CSS and JavaScript files clashing with existing Static files.</li>
+                <li>Ensuring Data Integrity with Frontend Elements</li>
+                <li>Managing Static and Dynamic Content</li>
+            </ul>
+            <p><b>Solution:</b></p>
+            <p>I spent time reviewing the conflicts, carefully selecting the appropriate changes, and writing clear commit messages.</p>
+            <p><b>Outcome:</b></p>
+            <p>Once all the pieces were in place, the final product was a fully integrated website with seamless frontend-backend communication. Through this process, I gained valuable experience in codebase management, collaboration, and resolving integration issues.</p>
+        </div>
+       
+        <!-- Add more blog posts as needed -->
+    </section>
+    <section id="contact" class="section">
+        <br><br>
+        <h2>Contact & Review</h2>
+        <form action="https://formspree.io/f/xnnqazqy" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <div class="slider-container">
+                <label for="creativity-slider">Creativity:</label>
+                <input type="range" id="creativity-slider" name="creativity" min="0" max="10" value="5" oninput="updateValue('creativity-value', this.value)">
+                <span id="creativity-value">5</span>/10
+            </div>
+    
+            <div class="slider-container">
+                <label for="skills-slider">Skills:</label>
+                <input type="range" id="skills-slider" name="skills" min="0" max="10" value="5" oninput="updateValue('skills-value', this.value)">
+                <span id="skills-value">5</span>/10
+            </div>
+            <button type="submit">Send</button>
+        </form>
+        
+    </section>
+   
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+    <script>
+        const textArray = ["Machine Learning.", "Backend Developing."];
+        let count = 0;
+        let index = 0;
+        let currentText = "";
+        let letter = "";
+    
+        (function type() {
+            // Reset if count reaches the end of the array
+            if (count === textArray.length) {
+                count = 0;
+            }
+    
+            // Get the current text and slice one more character
+            currentText = textArray[count];
+            letter = currentText.slice(0, ++index);
+    
+            // Update the span in the About section
+            document.querySelector("#dynamic-text").textContent = letter;
+    
+            // Check if the current word has been completely typed
+            if (letter.length === currentText.length) {
+                count++; // Move to the next word in the array
+                index = 0; // Reset the index for the new word
+            }
+    
+            // Call the function again after a delay for the typing effect
+            setTimeout(type, 200); // Adjust speed if needed
+        })();
+    </script>
+    
+    
+</body>
+</html>

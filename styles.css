@@ -1,0 +1,544 @@
+:root {
+    --primary-color: #000000; /* Textured black for the background */
+    --secondary-color: #483D8B; /* Darker blue for accents */
+    --accent-color: #ffa600; /* Gold for highlights */
+    --text-color: #FFFFFF; /* White for text */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--primary-color); /* Set the background color */
+    color: var(--text-color); /* Set the text color */
+
+}
+
+header {
+    background: var(--secondary-color); /* Set the header background color */
+    color: var(--text-color); /* Set the header text color */
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--text-color); /* Set the navigation text color */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: var(--accent-color); /* Set the navigation hover background color */
+    color: var(--primary-color); /* Set the navigation hover text color */
+    border-radius: 5px;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.menu-icon span {
+    background: var(--text-color); /* Set the menu icon color */
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    transition: all 0.3s;
+}
+
+.section {
+    padding: 2rem 2rem;
+    min-height: 100vh;
+    transition: padding 0.3s;
+ 
+}
+
+.intro {
+    text-align: center;
+    padding: 2rem 2rem;
+    background: var(--secondary-color); /* Set the intro background color */
+    margin-top: 3rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.intro:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 {
+    color: var(--text-color); /* Set the heading text color */
+    transition: color 0.3s;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--text-color); /* Set the heading underline color */
+    margin: 0.5rem auto;
+    transition: width 0.3s;
+}
+
+h2:hover::after {
+    width: 100px;
+}
+
+.project, .blog-post {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--secondary-color); /* Set the project and blog post background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover, .blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin:
+    0 auto;
+    background: var(--secondary-color); /* Set the form background color */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+form input, form textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: var(--text-color); /* Set the input focus border color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    background: var(--text-color); /* Set the button background color */
+    color: var(--primary-color); /* Set the button text color */
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: var(--accent-color); /* Set the button hover background color */
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-color); /* Set the footer background color */
+    color: var(--text-color); /* Set the footer text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background: var(--secondary-color); /* Set the navigation background color */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ul.expanded {
+        height: auto;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .section {
+        padding: 1rem 1rem;
+    }
+
+    .intro {
+        margin-top: 5rem;
+    }
+}
+
+.home-section {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    /* background: url('tech-technomancer-abstract-minimalism-futuristic-hd-wallpaper-preview.jpg') no-repeat center center; */
+    background-size: cover;
+}
+
+.content h1 {
+    font-size: 48px;
+    color: #5b5656;
+}
+
+.content span {
+    
+    color: #ff7a00;
+}
+
+.content p {
+    margin: 20px 0;
+    font-size: 24px;
+}
+
+.btn {
+    background-color: #6200ea;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #3700b3;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #a49d9d;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.avatar img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+
+}
+
+/* Style for About Me section */
+#about {
+    padding: 20px;
+    /* background: url('tech-technomancer-abstract-minimalism-futuristic-hd-wallpaper-preview.jpg') no-repeat center center; */
+    background-size: cover;
+}
+
+#about h2 {
+    font-size: 2rem; /* Size of the About Me heading */
+    margin-bottom: 20px;
+    text-align: center;
+
+    /* color: #333; Darker color for the heading */
+}
+
+#about p {
+    font-size: 1.25rem; /* Increase paragraph font size */
+    line-height: 1.3;
+    margin-bottom: 15px;
+
+    /* color: #555; A bit lighter gray for the paragraphs */
+    /* text-align: center; Center the text */
+}
+
+/* Style for the dynamic text inside the span */
+#about #dynamic-text {
+
+    font-size: 1.75rem; /* Larger font size for span text */
+    font-weight: bold;
+    color: #c46928; /* Different color (e.g., orange-red) */
+    text-transform: uppercase; /* Make it uppercase for emphasis */
+}
+.about-body{
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--secondary-color); /* Set the project and blog post background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Styles for the Projects section */
+#projects {
+    background-color: black; /* Light background for contrast */
+    padding: 40px 20px; /* Spacing around the section */
+    text-align: center; /* Center align text */
+}
+
+#projects h2 {
+    font-size: 2.5em; /* Larger font size for section title */
+    color: #ffffff; /* Dark color for better readability */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.project {
+    background-color: #483D8B; /* White background for each project card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Spacing inside project card */
+    margin: 20px auto; /* Center and space between project cards */
+    max-width: 600px; /* Max width to maintain readability */
+    transition: transform 0.2s; /* Smooth scaling effect on hover */
+}
+
+.project:hover {
+    transform: scale(1.02); /* Slightly enlarge the card on hover */
+}
+
+.project h3 {
+    font-size: 1.8em; /* Font size for project title */
+    color: #c46928; /* Bootstrap primary color for titles */
+    margin-bottom: 10px; /* Space below the project title */
+}
+
+.project p {
+    font-size: 1em; /* Standard font size for descriptions */
+    color: #ffffff; /* Grey color for description text */
+    line-height: 1.5; /* Improved line spacing for readability */
+}
+
+.vid {
+    margin-top: 10px; /* Space above the video */
+}
+
+video {
+    width: 100%; /* Make video responsive */
+    border-radius: 10px; /* Round video corners */
+    max-height: 300px; /* Limit max height for videos */
+}
+
+
+/* Review Section Styling */
+#reviews {
+    padding: 30px;
+
+    text-align: center;
+}
+
+#reviews h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+.slider-container {
+    margin-bottom: 20px;
+}
+
+.slider-container label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+
+}
+
+input[type="range"] {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.review-result {
+    display: none;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.review-result h3 {
+    margin-bottom: 10px;
+}
+
+
+#blog h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+#contact h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+
+.skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.skills > div {
+    flex: 1;
+}
+
+.skills h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #c46928;
+    padding-left: 20px;
+}
+
+.skills ul {
+    list-style-type: disc; /* or circle, square, etc. */
+    list-style-position: inside; /* or outside */
+    padding-left: 20px; /* Adjust this to control the bullet's indentation */
+}
+
+/* Adjust list item spacing */
+.skills ul li {
+    padding-left: 10px; /* Fine-tune the space between bullet and text */
+    margin-left: 5px;   /* Adjust spacing between each list item */
+    font-size: 18px;
+    line-height: 1.8;
+    align-items: center;
+}
+
+/* Make the skills responsive */
+@media (max-width: 768px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills > div {
+        margin-bottom: 20px;
+    }
+}
+
+.skills ul li i {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #333; /* Icon color */
+    vertical-align: middle; /* Align the icon with the text */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.6), 0 0 20px rgba(0, 0, 255, 0.4); /* Constant blue glow */
+}
+
+/* Optional: Change color on hover */
+.skills ul li i:hover {
+    color: #ffa600; /* Change color on hover */
+    box-shadow: 0 0 15px rgba(255, 166, 0, 0.8), 0 0 30px rgba(255, 166, 0, 0.6); /* Glowing effect on hover */
+}
+
+/* Remove the hover effect */
+.skills ul li i:hover {
+    color: #ffa600; /* You can choose to keep this if you want a color change on hover, but it won't affect the glow */
+    box-shadow: 0 0 15px rgba(255, 166, 0, 0.8), 0 0 30px rgba(255, 166, 0, 0.6); /* Glowing effect on hover */
+}
+
+/* Always visible glow */
+.skills ul li i {
+    color: #ffa600; /* Change color if needed */
+    box-shadow: 0 0 15px rgba(255, 166, 0, 0.8), 0 0 30px rgba(255, 166, 0, 0.6); /* Make the glow always visible */
+}
+
